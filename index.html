@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Campus Helpdesk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        <div>
+            <h2>Campus Helpdesk Assistant</h2>
+            <p>Multilingual Student Support Portal</p>
+        </div>
+        <div class="header-actions">
+            <select id="langSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="hg">Hinglish</option>
+            </select>
+            <button class="clear-btn" onclick="clearChat()">Clear</button>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <span>Covered Departments: 8</span>
+        <span id="respTime">Status: Ready</span>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="quick-btns" id="quickBtns"></div>
+
+    <div class="input-area">
+        <button class="mic-btn" id="micBtn" onclick="startVoice()">Mic</button>
+        <input type="text" id="userInput" placeholder="Type or speak your question..." onkeypress="if(event.key==='Enter') sendMessage()">
+        <button class="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
